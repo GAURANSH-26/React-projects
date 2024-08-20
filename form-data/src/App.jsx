@@ -1,16 +1,17 @@
 import Form from './components/Form';
-import {BrouserRouter,Routes,Route} from 'react-router-dom';
+import Data from './components/Data';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import './App.css'
 
 function App() {
 
   return (
-    <BrouserRouter>
+    <BrowserRouter>
     <Routes>
       <Route path='/' element={<Form/>}/>
       <Route path='/data' element={<Data/>}/>
     </Routes>
-    </BrouserRouter>
+    </BrowserRouter>
   )
 }
 

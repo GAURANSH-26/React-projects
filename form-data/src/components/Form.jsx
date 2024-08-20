@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 const Form = () => {
 
@@ -9,6 +11,8 @@ const Form = () => {
         city:'',
         remark:'',
     })
+    const navigate = useNavigate();
+
     const handleChange =(event)=>{
         const{name, value}= event.target;
 
@@ -22,13 +26,15 @@ const Form = () => {
         e.preventDefault();
 
         localStorage.setItem('formData', JSON.stringify(form));
+
+        navigate('/data');
     }
 
     
   return (
     
 
-    <div>
+    <div className='form-card'>
       <h1>Student Data</h1>
       <form action="" onSubmit={handleForm}>
         Student Name:
