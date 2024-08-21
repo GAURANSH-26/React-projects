@@ -1,16 +1,19 @@
 import './App.css'
 import {BrowserRouter, Routes,Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Home from './components/Home'
 
 function App() {
 
   return (
-    <BrowserRouter>
+   <div className='bg-slate-700 '>
+     <BrowserRouter>
     <Navbar/>
       <Routes>
-        <Route/>
+        <Route path='/' element={<Home/>}/>
       </Routes>
     </BrowserRouter>
+   </div>
   )
 }
 
