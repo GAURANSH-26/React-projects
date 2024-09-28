@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 const Freebook = () => {
     const settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -21,19 +21,19 @@ const Freebook = () => {
                 consectetur ea maiores aliquam beatae?</p>
 
             <div className="book-cards">
-                <Slider {...settings}>
-                    <div className="card">
+                <Slider {...settings} className='px-4'>
+                    <div className="card border max-w-96 min-h-96 rounded-2xl">
                         <div className="img">
-                            <img src="" alt="" srcset="" />
+                            <img src="" alt="image" srcset="" />
                         </div>
                         <div className="content">
-                            <h1>Hello world</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, exercitationem!
+                            <h1 className='font-bold text-xl px-4'>Hello world</h1>
+                            <p className='font-bold px-4 my-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, exercitationem!
                                  Itaque eos eius error aliquam animi velit, sunt deserunt,
                                  </p>
-                                 <div className="card-btn">
-                                    <button>Free</button>
-                                    <button>Read</button>
+                                 <div className="card-btn justify-between flex px-9">
+                                    <button className='border px-3 rounded-full text-white hover:bg-sky-500'>Free</button>
+                                    <button className='border px-3 rounded-full text-white hover:bg-sky-500'>Read</button>
                                  </div>
                         </div>
                     </div>
